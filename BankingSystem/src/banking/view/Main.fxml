@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<VBox prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="banking.view.Main">
+	<children>
+		<HBox>
+			<children>
+				<VBox fx:id="menu">
+					<children>
+						<VBox id="Home" alignment="CENTER" prefHeight="70.0" prefWidth="94.0" styleClass="icon-menu">
+							<children>
+								<SVGPath content="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z" />
+								<Label text="Home" />
+							</children>
+						</VBox>
+						<VBox id="Deposit" alignment="CENTER" prefHeight="70.0" prefWidth="94.0" styleClass="icon-menu">
+							<children>
+								<SVGPath content="M28 16h-5l-7 7-7-7h-5l-4 8v2h32v-2l-4-8zM0 28h32v2h-32v-2zM18 10v-8h-4v8h-7l9 9 9-9h-7z" />
+								<Label text="Deposit" />
+							</children>
+						</VBox>
+						<VBox id="Withdraw" alignment="CENTER" prefHeight="70.0" prefWidth="94.0" styleClass="icon-menu">
+							<children>
+								<SVGPath content="M0 28h32v2h-32zM32 24v2h-32v-2l4-8h8v4h8v-4h8zM7 10l9-9 9 9h-7v8h-4v-8z" />
+								<Label text="Withdraw" />
+							</children>
+						</VBox>
+						<VBox id="Balance" alignment="CENTER" prefHeight="70.0" prefWidth="94.0" styleClass="icon-menu">
+							<children>
+								<SVGPath content="M15 2c-8.284 0-15 6.716-15 15s6.716 15 15 15c8.284 0 15-6.716 15-15s-6.716-15-15-15zM15 29c-6.627 0-12-5.373-12-12s5.373-12 12-12c6.627 0 12 5.373 12 12s-5.373 12-12 12zM16 16v-4h4v-2h-4v-2h-2v2h-4v8h4v4h-4v2h4v2h2v-2h4l-0-8h-4zM14 16h-2v-4h2v4zM18 22h-2v-4h2v4z" />
+								<Label text="Balance" />
+							</children>
+						</VBox>
+						<VBox id="SignOut" alignment="CENTER" onMouseClicked="#signOut" onMousePressed="#signOut" prefHeight="70.0" prefWidth="94.0" styleClass="icon-menu">
+							<children>
+								<SVGPath content="M20 4.581v4.249c1.131 0.494 2.172 1.2 3.071 2.099 1.889 1.889 2.929 4.4 2.929 7.071s-1.040 5.182-2.929 7.071c-1.889 1.889-4.4 2.929-7.071 2.929s-5.182-1.040-7.071-2.929c-1.889-1.889-2.929-4.4-2.929-7.071s1.040-5.182 2.929-7.071c0.899-0.899 1.94-1.606 3.071-2.099v-4.249c-5.783 1.721-10 7.077-10 13.419 0 7.732 6.268 14 14 14s14-6.268 14-14c0-6.342-4.217-11.698-10-13.419zM14 0h4v16h-4z" />
+								<Label text="Sign Out" />
+							</children>
+						</VBox>
+					</children>
+				</VBox>
+				<VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+					<children>
+						<GridPane alignment="CENTER_LEFT">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES" maxWidth="199.0" minWidth="10.0" prefWidth="194.0" />
+								<ColumnConstraints hgrow="SOMETIMES" maxWidth="216.0" minWidth="10.0" prefWidth="216.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+							</rowConstraints>
+							<children>
+								<HBox GridPane.columnSpan="2">
+									<children>
+										<Label text="Online Banking System" />
+									</children>
+								</HBox>
+								<Label text="14 February 2020" GridPane.rowIndex="1" />
+								<Label alignment="CENTER_RIGHT" text="Hi Myat, Have a nice day!" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+							</children>
+						</GridPane>
+						<StackPane fx:id="contentView" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+							<children>
+							</children>
+						</StackPane>
+					</children>
+				</VBox>
+			</children>
+		</HBox>
+	</children>
+</VBox>
